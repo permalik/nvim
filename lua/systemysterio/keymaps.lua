@@ -72,6 +72,7 @@ vim.keymap.set("n", "<leader>L", "<cmd>Lazy<cr>", opts)
 
 -- Fugitive
 vim.keymap.set("n", "<leader>gg", "<cmd>Git<cr>", opts)
+vim.keymap.set("n", "<leader>ga", "<cmd>Git add -A<cr>", opts)
 vim.keymap.set("n", "<leader>gp", "<cmd>Git push<cr>", opts)
 
 -- code_runner
