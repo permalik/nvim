@@ -58,3 +58,72 @@ snippet engine
 
 #### [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 syntax highlighter
+
+## treesitter languages
+astro  
+
+bash  
+
+c  
+
+cpp  
+
+css  
+
+go  
+
+graphql  
+
+html  
+
+javascript  
+
+jsdoc  
+
+json  
+
+kotlin  
+
+lua  
+
+luadoc  
+
+markdown  
+
+markdown_inline  
+
+php  
+
+phpdoc  
+
+pug  
+
+python  
+
+ruby  
+
+rust  
+
+scss  
+
+sql  
+
+svelte  
+
+toml  
+
+tsx  
+
+typescript  
+
+vue  
+
+yaml  
+
+zig
+
+## keymaps
+to be added...
+
+## options
+to be added...
