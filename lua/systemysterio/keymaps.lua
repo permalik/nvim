@@ -8,7 +8,16 @@ vim.keymap.set('n', '<Space>', '', opts) -- I don't remember why this is useful 
 vim.g.mapleader = ' ' -- set leader
 vim.g.maplocalleader = ' ' -- set local leader
 
+-- netrw file browser
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.set("x", "<leader>p", "\"_dP") -- copy pasta. delete highlighted word into void register and retain copy
+
+-- remap esc so <C-c> saves vertical edits
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- don't press capital Q
+vim.keymap.set("n", "Q", "<nop>")
 
 -- better window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
@@ -42,17 +51,16 @@ vim.keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 
--- make sure you use a capital 'J' for this first one, or it won't work
--- vim.keymap.set("n", "J", "mzJ`z", opts)
--- vim.keymap.set("n", "<C-d>", "<C-d>zz", opts) -- keep cursor in middle of screen when i move down
--- vim.keymap.set("n", "<C-u>", "<C-u>zz", opts) -- keep cursor in middle of screen when i move up
--- vim.keymap.set("n", "n", "nzzzv", opts) -- I need to watch the video again to remember what this does
--- vim.keymap.set("n", "N", "nzzzv", opts) -- I need to watch the video for this one too, sorry.
+vim.keymap.set("n", "J", "mzJ`z", opts) -- keep your J in place when appending
+vim.keymap.set("n", "<C-d>", "<C-d>zz", opts) -- keep cursor in middle of screen when i move down
+vim.keymap.set("n", "<C-u>", "<C-u>zz", opts) -- keep cursor in middle of screen when i move up
+-- vim.keymap.set("n", "n", "nzzzv", opts) -- search and keep search terms in middle
+-- vim.keymap.set("n", "N", "Nzzzv", opts) -- search and keep search terms in middle
 
--- I don't remember what these do. Will report back once I watch the video again and play with them some more
--- vim.keymap.set("n", "<leader>y", "\"+y", opts)
--- vim.keymap.set("v", "<leader>y", "\"+y", opts)
--- vim.keymap.set("n", "<leader>Y", "\"+Y", opts)
+-- yarnk to system clipboard. then ap to yarnk paragraph.
+vim.keymap.set("n", "<leader>y", "\"+y", opts)
+vim.keymap.set("v", "<leader>y", "\"+y", opts)
+vim.keymap.set("n", "<leader>Y", "\"+Y", opts)
 
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
