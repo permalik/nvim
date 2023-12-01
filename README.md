@@ -56,6 +56,9 @@ lsp client config
 #### [luasnip](https://github.com/L3MON4D3/LuaSnip)
 snippet engine
 
+#### [rusttools](https://github.com/simrat39/rust-tools.nvim)
+rust lsp addon
+
 #### [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 syntax highlighter
 
