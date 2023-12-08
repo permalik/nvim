@@ -18,6 +18,7 @@ local options = {
 	cindent = true,
 	numberwidth = 4,
 	signcolumn = 'yes',
+    colorcolumn = '80',
 	wrap = false,
 	laststatus = 3,
 	tabstop = 4,
