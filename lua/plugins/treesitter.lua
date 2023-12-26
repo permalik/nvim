@@ -33,6 +33,7 @@ return {
                 "scss",
                 "sql",
                 "svelte",
+                "templ",
                 "toml",
                 "tsx",
 				"typescript",
