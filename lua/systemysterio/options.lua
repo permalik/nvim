@@ -35,6 +35,12 @@ local options = {
 	equalalways = false,
 }
 
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    }
+})
+
 -- for options and values in the options table, set them using vim.opt.<option> = <value>
 for k, v in pairs(options) do
 	vim.opt[k] = v
