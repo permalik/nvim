@@ -5,8 +5,12 @@ local term_opts = { silent = true } -- same for the terminal keybindings
 
 vim.keymap.set('n', '<Space>', '', opts) -- I don't remember why this is useful but I'm not deleting it
 
+
 vim.g.mapleader = ' ' -- set leader
 vim.g.maplocalleader = ' ' -- set local leader
+
+vim.keymap.set("n", "<leader>t", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>r", vim.cmd.redo)
 
 -- netrw file browser
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
