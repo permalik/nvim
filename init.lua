@@ -1,5 +1,6 @@
 require("systemysterio.keymaps")
 require("systemysterio.options")
+local lualine_v = require("systemysterio.var.lualine")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -21,6 +22,7 @@ local opts = {
 }
 
 require("lazy").setup('plugins', opts)
+require("lualine").setup(lualine_v)
 
 vim.cmd("colorscheme kanagawa-lotus")
 vim.cmd("colorscheme kanagawa-wave")
