@@ -12,6 +12,7 @@
 ### global
 [fugitive: git integration](https://github.com/tpope/vim-fugitive)  
 [lazy: plugin manager](https://github.com/folke/lazy.nvim)  
+[lualine: statusline](https://github.com/nvim-lualine/lualine.nvim)
 [mason: package manager](https://github.com/williamboman/mason.nvim)  
 [masonlspconfig: mason package manager bride for lsp support](https://github.com/williamboman/mason-lspconfig.nvim)  
 [plenary: async library and utils](https://github.com/nvim-lua/plenary.nvim)  
