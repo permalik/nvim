@@ -15,11 +15,13 @@
 [mason: package manager](https://github.com/williamboman/mason.nvim)  
 [masonlspconfig: mason package manager bride for lsp support](https://github.com/williamboman/mason-lspconfig.nvim)  
 [plenary: async library and utils](https://github.com/nvim-lua/plenary.nvim)  
+[whichkey: binding assist](https://github.com/folke/which-key.nvim)
 
 ### files
 [fzf: fuzzy finder](https://github.com/nvim-telescope/telescope-fzf-native.nvim)  
 [harpoon: file dashboard and switcher](https://github.com/theprimeagen/harpoon)  
 [telescope: fuzzy finder](https://github.com/nvim-telescope/telescope.nvim)  
+[undotree: vvcs](https://github.com/mbbill/undotree)
 
 ### language support
 [cmp: lsp completion](https://github.com/hrsh7th/nvim-cmp)  
