@@ -1,7 +1,3 @@
-# systemysterio nvim
-
-## general config
-
 ### colorscheme
 
 #### [kanagawa](https://github.com/rebelot/kanagawa.nvim)
