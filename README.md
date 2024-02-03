@@ -12,8 +12,7 @@
 ## plugins
 
 ### global
-[fugitive](https://github.com/tpope/vim-fugitive)  
-git integration
+[fugitive: git integration](https://github.com/tpope/vim-fugitive)  
 [lazy](https://github.com/folke/lazy.nvim)  
 plugin manager
 [mason](https://github.com/williamboman/mason.nvim)  
