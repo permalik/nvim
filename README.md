@@ -1,3 +1,5 @@
+## general config
+
 ### colorscheme
 
 #### [kanagawa](https://github.com/rebelot/kanagawa.nvim)
@@ -28,7 +30,7 @@
 [rusttools: rust lsp addon](https://github.com/simrat39/rust-tools.nvim)  
 [treesitter: syntax highlighter](https://github.com/nvim-treesitter/nvim-treesitter)  
 
-## treesitter languages
+## languages
 astro  
 bash  
 c  
