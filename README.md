@@ -30,7 +30,6 @@
 [lsp-zero: lsp manager](https://github.com/VonHeikemen/lsp-zero.nvim)  
 [lspconfig: lsp client config](https://github.com/neovim/nvim-lspconfig)  
 [luasnip: snippet engine](https://github.com/L3MON4D3/LuaSnip)  
-[rusttools: rust lsp addon](https://github.com/simrat39/rust-tools.nvim)  
 [treesitter: syntax highlighter](https://github.com/nvim-treesitter/nvim-treesitter)  
 
 ## languages
