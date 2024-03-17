@@ -1,3 +1,22 @@
+--[[
+    If you don't know anything about Lua, I recommend taking some time to read through
+    a guide. One possible example which will only take 10-15 minutes:
+      - https://learnxinyminutes.com/docs/lua/
+
+    After understanding a bit more about Lua, you can use `:help lua-guide` as a
+    reference for how Neovim integrates Lua.
+    - :help lua-guide
+    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
+
+  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
+
+    If you don't know what this means, type the following:
+      - <escape key>
+      - :
+      - Tutor
+      - <enter key>
+--]]
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -5,7 +24,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -218,7 +237,16 @@ require('lazy').setup({
             }
         end,
     },
-
+    {
+        'nvim-lualine/lualine.nvim',
+        event = 'VimEnter',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            local lualine_var = require 'permalik.var.lualine'
+            require('lualine').setup(lualine_var)
+        end,
+    },
+    --
     -- NOTE: Plugins can specify dependencies.
     --
     -- The dependencies are proper plugin specifications as well - anything
@@ -809,24 +837,19 @@ require('lazy').setup({
         end,
     },
 
-    -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
-    -- init.lua. If you want these files, they are in the repository, so you can just download them and
-    -- put them in the right spots if you want.
-
     -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for kickstart
     --
     --  Here are some example plugins that I've included in the kickstart repository.
     --  Uncomment any of the lines below to enable them (you will need to restart nvim).
-    --
     -- require 'kickstart.plugins.debug',
-    -- require 'kickstart.plugins.indent_line',
+    require 'plugins.indent_line',
 
     -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
     --    This is the easiest way to modularize your config.
     --
     --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
     --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-    -- { import = 'custom.plugins' },
+    import = 'plugins',
 }, {
     ui = {
         -- If you have a Nerd Font, set icons to an empty table which will use the
@@ -849,5 +872,6 @@ require('lazy').setup({
     },
 })
 
+-- Set <space> as the leader key
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
