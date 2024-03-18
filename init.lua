@@ -37,7 +37,7 @@ require('lazy').setup({
     require 'plugins.fugitive',
     require 'plugins.harpoon',
     require 'plugins.indent_line',
-    require 'plugins.kanagawa',
+    require 'plugins.rose_pine',
     require 'plugins.lspconfig',
     require 'plugins.lualine',
     require 'plugins.mini',

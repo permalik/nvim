@@ -27,16 +27,16 @@ vim.keymap.set(
     { desc = 'open diagnostic [q]uickfix list' }
 )
 -- colorscheme
-vim.keymap.set('n', '<leader>kl', ':colorscheme kanagawa-lotus<cr>', {
-    desc = 'set [k]anagawa-[l]otus colorscheme',
+vim.keymap.set('n', '<leader>c1', ':colorscheme rose-pine-main<cr>', {
+    desc = 'set [c]olorscheme 1: dark',
     silent = true,
 })
-vim.keymap.set('n', '<leader>kw', ':colorscheme kanagawa-wave<cr>', {
-    desc = 'set [k]anagawa-[l]otus colorscheme',
+vim.keymap.set('n', '<leader>c2', ':colorscheme rose-pine-moon<cr>', {
+    desc = 'set [c]olorscheme 2: mid',
     silent = true,
 })
-vim.keymap.set('n', '<leader>kd', ':colorscheme kanagawa-dragon<cr>', {
-    desc = 'set [k]anagawa-[l]otus colorscheme',
+vim.keymap.set('n', '<leader>c3', ':colorscheme rose-pine-dawn<cr>', {
+    desc = 'set [c]olorscheme 3: light',
     silent = true,
 })
 -- terminal
