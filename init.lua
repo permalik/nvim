@@ -44,7 +44,8 @@ require('lazy').setup({
     require 'plugins.nvim_cmp',
     require 'plugins.telescope',
     require 'plugins.todo_comments',
-    require 'plugins.whichkey',
+    require 'plugins.undotree',
+    require 'plugins.which_key',
 }, {
     ui = {
         -- If you have a Nerd Font, set icons to an empty table which will use the
