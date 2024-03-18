@@ -620,29 +620,6 @@ require('lazy').setup({
             }
         end,
     },
-    { -- You can easily change to a different colorscheme.
-        -- Change the name of the colorscheme plugin below, and then
-        -- change the command in the config to whatever the name of that colorscheme is
-        --
-        -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`
-        'rebelot/kanagawa.nvim',
-        priority = 1000, -- make sure to load this before all the other start plugins
-        init = function()
-            vim.cmd.colorscheme 'kanagawa-lotus'
-            vim.cmd.colorscheme 'kanagawa-wave'
-            vim.cmd.colorscheme 'kanagawa-dragon'
-
-            -- You can configure highlights by doing something like
-            vim.cmd.hi 'Comment gui=none'
-        end,
-    },
-    -- Highlight todo, notes, etc in comments
-    {
-        'folke/todo-comments.nvim',
-        event = 'VimEnter',
-        dependencies = { 'nvim-lua/plenary.nvim' },
-        opts = { signs = false },
-    },
     { -- Collection of various small independent plugins/modules
         'echasnovski/mini.nvim',
         config = function()
@@ -717,8 +694,10 @@ require('lazy').setup({
     -- require 'kickstart.plugins.debug',
     require 'plugins.debug',
     require 'plugins.fugitive',
+    require 'plugins.kanagawa',
     require 'plugins.harpoon',
     require 'plugins.indent_line',
+    require 'plugins.todo_comments',
 
     -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
     --    This is the easiest way to modularize your config.
