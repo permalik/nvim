@@ -44,6 +44,7 @@ require('lazy').setup({
     require 'plugins.nvim_cmp',
     require 'plugins.telescope',
     require 'plugins.todo_comments',
+    require 'plugins.toggleterm',
     require 'plugins.undotree',
     require 'plugins.which_key',
 }, {

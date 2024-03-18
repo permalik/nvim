@@ -88,8 +88,10 @@ return {
             cssls = {},
             -- elixirls = {},
             emmet_language_server = {},
+            eslint = {},
             -- htmx = {},
             gopls = {},
+            html = {},
             jsonls = {},
             marksman = {},
             -- ocamlls = {},
@@ -97,14 +99,21 @@ return {
             -- omnisharp = {},
             -- postgres_lsp = {},
             -- pyright = {},
-            rust_analyzer = {},
+            rust_analyzer = {
+                settings = {
+                    ['rust-analyzer'] = {
+                        inlayHints = {
+                            auto = true,
+                        },
+                    },
+                },
+            },
             -- sqlls = {},
             -- sqls = {},
             -- svelte = {},
             -- tailwindcss = {},
             -- templ = {},
             tsserver = {},
-            volar = {},
             vuels = {},
 
             lua_ls = {
@@ -135,6 +144,8 @@ return {
         -- for you, so that they are available from within Neovim.
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {
+            'eslint_d',
+            'prettier',
             'stylua', -- Used to format lua code
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }

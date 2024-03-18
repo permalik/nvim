@@ -1,3 +1,5 @@
+-- TODO: local opts = {noremap=true, silent=true}
+-- TODO: should be able to use <C-l> to clear screen in terminal
 -- __ n: normal
 -- <space> is leader
 vim.g.mapleader = ' '
