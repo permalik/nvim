@@ -91,6 +91,9 @@ return {
             eslint = {},
             -- htmx = {},
             gopls = {},
+            hls = {
+                fileTypes = { 'haskell', 'lhaskell', 'cabal' },
+            },
             html = {},
             jsonls = {},
             marksman = {},

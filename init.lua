@@ -36,6 +36,7 @@ require('lazy').setup({
     require 'plugins.debug',
     require 'plugins.fugitive',
     require 'plugins.harpoon',
+    require 'plugins.haskell_tools',
     require 'plugins.indent_line',
     require 'plugins.rose_pine',
     require 'plugins.lspconfig',
