@@ -101,7 +101,7 @@ return {
             -- ocamllsp = {},
             -- omnisharp = {},
             -- postgres_lsp = {},
-            -- pyright = {},
+            pyright = {},
             rust_analyzer = {
                 settings = {
                     ['rust-analyzer'] = {
