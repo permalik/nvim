@@ -42,6 +42,7 @@ require('lazy').setup({
     require 'plugins.lspconfig',
     require 'plugins.lualine',
     require 'plugins.mini',
+    require 'plugins.nord',
     require 'plugins.nvim_cmp',
     require 'plugins.telescope',
     require 'plugins.todo_comments',

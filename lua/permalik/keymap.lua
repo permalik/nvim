@@ -41,6 +41,10 @@ vim.keymap.set('n', '<leader>c3', ':colorscheme rose-pine-dawn<cr>', {
     desc = 'set [c]olorscheme 3: light',
     silent = true,
 })
+vim.keymap.set('n', '<leader>c4', ':colorscheme nord<cr>', {
+    desc = 'set [c]olorscheme 4: nord',
+    silent = true,
+})
 -- terminal
 -- -- open a floating terminal
 -- vim.keymap.set('n', '<leader>tf', '<cmd>ToggleTerm direction=float<cr>', { silent = true })
