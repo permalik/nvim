@@ -82,7 +82,13 @@ return {
         --  - settings (table): Override the default settings passed when initializing the server.
         --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
         local servers = {
-            -- astro = {},
+            astro = {
+                init_options = {
+                    typescript = {
+                        serverPath = '/Users/au4/Library/pnpm/tsserver',
+                    },
+                },
+            },
             clangd = {},
             -- csharp_ls = {},
             cssls = {},
@@ -149,7 +155,7 @@ return {
         vim.list_extend(ensure_installed, {
             'eslint_d',
             'prettier',
-            'stylua', -- Used to format lua code
+            'stylua',
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

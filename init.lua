@@ -47,6 +47,7 @@ require('lazy').setup({
     require 'plugins.telescope',
     require 'plugins.todo_comments',
     require 'plugins.toggleterm',
+    require 'plugins.treesitter',
     require 'plugins.undotree',
     require 'plugins.which_key',
 }, {
