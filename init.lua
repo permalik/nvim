@@ -1,8 +1,3 @@
---[[
-    - https://learnxinyminutes.com/docs/lua/
-    - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
---]]
 require 'permalik.keymap'
 require 'permalik.option'
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
