@@ -2,47 +2,59 @@
 -- TODO: should be able to use <C-l> to clear screen in terminal
 -- __ n: normal
 -- <space> is leader
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 -- danger
-vim.keymap.set('n', 'Q', '<nop>')
+vim.keymap.set("n", "Q", "<nop>")
 -- netrw file browser
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- diagnostic
 vim.keymap.set(
-    'n',
-    '[d',
+    "n",
+    "[d",
     vim.diagnostic.goto_prev,
-    { desc = 'go to previous [d]iagnostic message' }
+    { desc = "go to previous [d]iagnostic message" }
 )
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'go to next [d]iagnostic message' })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "go to next [d]iagnostic message" })
 vim.keymap.set(
-    'n',
-    '<leader>e',
+    "n",
+    "<leader>e",
     vim.diagnostic.open_float,
-    { desc = 'show diagnostic [e]rror messages' }
+    { desc = "show diagnostic [e]rror messages" }
 )
 vim.keymap.set(
-    'n',
-    '<leader>q',
+    "n",
+    "<leader>q",
     vim.diagnostic.setloclist,
-    { desc = 'open diagnostic [q]uickfix list' }
+    { desc = "open diagnostic [q]uickfix list" }
 )
 -- colorscheme
-vim.keymap.set('n', '<leader>c1', ':colorscheme rose-pine-main<cr>', {
-    desc = 'set [c]olorscheme 1: dark',
+vim.keymap.set("n", "<leader>c1", ":colorscheme rose-pine-main<cr>", {
+    desc = "set [c]olorscheme 1: rose-pine-main",
     silent = true,
 })
-vim.keymap.set('n', '<leader>c2', ':colorscheme rose-pine-moon<cr>', {
-    desc = 'set [c]olorscheme 2: mid',
+vim.keymap.set("n", "<leader>c2", ":colorscheme rose-pine-moon<cr>", {
+    desc = "set [c]olorscheme 2: rose-pine-moon",
     silent = true,
 })
-vim.keymap.set('n', '<leader>c3', ':colorscheme rose-pine-dawn<cr>', {
-    desc = 'set [c]olorscheme 3: light',
+vim.keymap.set("n", "<leader>c3", ":colorscheme rose-pine-dawn<cr>", {
+    desc = "set [c]olorscheme 3: rose-pine-dawn",
     silent = true,
 })
-vim.keymap.set('n', '<leader>c4', ':colorscheme nord<cr>', {
-    desc = 'set [c]olorscheme 4: nord',
+vim.keymap.set("n", "<leader>c4", ":colorscheme nord<cr>", {
+    desc = "set [c]olorscheme 4: nord",
+    silent = true,
+})
+vim.keymap.set("n", "<leader>c5", ":colorscheme kanagawa-dragon<cr>", {
+    desc = "set [c]olorscheme 5: kanagawa-dragon",
+    silent = true,
+})
+vim.keymap.set("n", "<leader>c6", ":colorscheme kanagawa-wave<cr>", {
+    desc = "set [c]olorscheme 6: kanagawa-wave",
+    silent = true,
+})
+vim.keymap.set("n", "<leader>c7", ":colorscheme kanagawa-lotus<cr>", {
+    desc = "set [c]olorscheme 7: kanagawa-lotus",
     silent = true,
 })
 -- terminal
@@ -68,33 +80,33 @@ vim.keymap.set('n', '<leader>c4', ':colorscheme nord<cr>', {
 -- vim.keymap.set("n", "<leader>tm", "<cmd>lua _MAKE_TOGGLE()<cr>", opts) --  run make in a vertical toggleterm instance
 -- vim.keymap.set("n", "<leader>tr", "<cmd>lua _RUBY_TOGGLE()<cr>", opts) -- open IRB
 -- fugitive
-vim.keymap.set('n', '<leader>gg', '<cmd>Git<cr>', { silent = true })
-vim.keymap.set('n', '<leader>ga', '<cmd>Git add -A<cr>', { silent = true })
-vim.keymap.set('n', '<leader>gp', '<cmd>Git push<cr>', { silent = true })
-vim.keymap.set('n', '<leader>r', vim.cmd.redo, { desc = '[<leader>r]edo' })
+vim.keymap.set("n", "<leader>gg", "<cmd>Git<cr>", { silent = true })
+vim.keymap.set("n", "<leader>ga", "<cmd>Git add -A<cr>", { silent = true })
+vim.keymap.set("n", "<leader>gp", "<cmd>Git push<cr>", { silent = true })
+vim.keymap.set("n", "<leader>r", vim.cmd.redo, { desc = "[<leader>r]edo" })
 -- keep cursor in middle of screen when i move down
-vim.keymap.set('n', '<C-d>', '<C-d>zz', { silent = true })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
 -- keep cursor in middle of screen when i move up
-vim.keymap.set('n', '<C-u>', '<C-u>zz', { silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
 -- keep your J in place when appending
-vim.keymap.set('n', 'J', 'mzJ`z', { silent = true })
+vim.keymap.set("n", "J", "mzJ`z", { silent = true })
 -- __ v: visual
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", {
-    desc = 'move selected blocks of text with proper indenting',
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {
+    desc = "move selected blocks of text with proper indenting",
     silent = true,
 })
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", {
-    desc = 'move selected blocks of text with proper indenting',
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {
+    desc = "move selected blocks of text with proper indenting",
     silent = true,
 })
 -- better window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { silent = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { silent = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true })
 -- __ x: select
 -- -- delete highlighted word into void register and retain copy
 -- vim.keymap.set('x', '<leader>p', '"_dP')
 -- __ i: insert
 -- save vertical edits
-vim.keymap.set('i', '<C-c>', '<Esc>')
+vim.keymap.set("i", "<C-c>", "<Esc>")
