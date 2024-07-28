@@ -128,6 +128,7 @@ return {
             -- templ = {},
             tsserver = {},
             vuels = {},
+            zls = {},
 
             lua_ls = {
                 -- cmd = {...},
