@@ -28,6 +28,11 @@ vim.keymap.set(
     vim.diagnostic.setloclist,
     { desc = "open diagnostic [q]uickfix list" }
 )
+-- transparent editor
+vim.keymap.set("n", "<leader>c0", ":hi Normal guibg=NONE ctermbg=NONE", {
+    desc = "set [c]olorscheme 0: transparent",
+    silent = true,
+})
 -- colorscheme
 vim.keymap.set("n", "<leader>c1", ":colorscheme rose-pine-main<cr>", {
     desc = "set [c]olorscheme 1: rose-pine-main",
