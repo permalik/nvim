@@ -29,7 +29,7 @@ vim.keymap.set(
     { desc = "open diagnostic [q]uickfix list" }
 )
 -- transparent editor
-vim.keymap.set("n", "<leader>c0", ":hi Normal guibg=NONE ctermbg=NONE", {
+vim.keymap.set("n", "<leader>c0", ":hi Normal guibg=NONE ctermbg=NONE<cr>", {
     desc = "set [c]olorscheme 0: transparent",
     silent = true,
 })
