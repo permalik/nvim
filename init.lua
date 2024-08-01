@@ -44,6 +44,7 @@ require("lazy").setup({
     require "plugins.todo_comments",
     require "plugins.toggleterm",
     require "plugins.treesitter",
+    require "plugins.trouble",
     require "plugins.undotree",
     require "plugins.which_key",
 }, {
