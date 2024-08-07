@@ -95,7 +95,7 @@ return {
             -- elixirls = {},
             emmet_language_server = {},
             eslint = {},
-            -- htmx = {},
+            htmx = {},
             gopls = {
                 settings = {
                     usePlaceholders = true,
@@ -121,11 +121,11 @@ return {
                     },
                 },
             },
-            -- sqlls = {},
-            -- sqls = {},
-            -- svelte = {},
-            -- tailwindcss = {},
-            -- templ = {},
+            sqlls = {},
+            sqls = {},
+            svelte = {},
+            tailwindcss = {},
+            templ = {},
             tsserver = {},
             vuels = {},
             zls = {},
@@ -158,8 +158,8 @@ return {
         -- for you, so that they are available from within Neovim.
         local ensure_installed = vim.tbl_keys(servers or {})
         vim.list_extend(ensure_installed, {
-            "eslint_d",
-            "prettier",
+            -- "eslint_d",
+            -- "prettier",
             "stylua",
         })
         require("mason-tool-installer").setup { ensure_installed = ensure_installed }
