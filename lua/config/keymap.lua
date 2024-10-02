@@ -30,16 +30,20 @@ vim.keymap.set("n", "<leader>c4", ":colorscheme nord<cr>", {
     desc = "set [c]olorscheme 4: nord",
     silent = true,
 })
-vim.keymap.set("n", "<leader>c5", ":colorscheme kanagawa-dragon<cr>", {
-    desc = "set [c]olorscheme 5: kanagawa-dragon",
+vim.keymap.set("n", "<leader>c5", ":colorscheme nordic<cr>", {
+    desc = "set [c]olorscheme 5: nordic",
     silent = true,
 })
-vim.keymap.set("n", "<leader>c6", ":colorscheme kanagawa-wave<cr>", {
-    desc = "set [c]olorscheme 6: kanagawa-wave",
+vim.keymap.set("n", "<leader>c6", ":colorscheme kanagawa-dragon<cr>", {
+    desc = "set [c]olorscheme 6: kanagawa-dragon",
     silent = true,
 })
-vim.keymap.set("n", "<leader>c7", ":colorscheme kanagawa-lotus<cr>", {
-    desc = "set [c]olorscheme 7: kanagawa-lotus",
+vim.keymap.set("n", "<leader>c7", ":colorscheme kanagawa-wave<cr>", {
+    desc = "set [c]olorscheme 7: kanagawa-wave",
+    silent = true,
+})
+vim.keymap.set("n", "<leader>c8", ":colorscheme kanagawa-lotus<cr>", {
+    desc = "set [c]olorscheme 8: kanagawa-lotus",
     silent = true,
 })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {

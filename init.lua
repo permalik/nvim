@@ -1,5 +1,10 @@
-require('config.keymap')
+require("config.keymap")
 require("config.option")
+-- require("aegis").setup()
+
+if vim.fn.has("termguicolors") == 1 then
+  vim.opt.termguicolors = true
+end
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "highlight when yanking text",
