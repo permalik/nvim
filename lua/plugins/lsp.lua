@@ -108,7 +108,6 @@ return {
                 -- fsharp_language_server = {},
                 -- gleam = {},
                 gopls = {},
-                -- hls = {},
                 -- npm i -g vscode-langservers-extracted
                 html = {},
                 -- cargo install htmx-lsp
@@ -173,6 +172,8 @@ return {
                 -- https://github.com/zigtools/zls
                 zls = {},
             }
+
+            require("lspconfig").hls.setup({})
 
 
             require("lspconfig").racket_langserver.setup {
@@ -259,6 +260,7 @@ return {
                 }
             end,
             formatters_by_ft = {
+                haskell = { "ormolu" },
                 lua = { "stylua" },
                 -- Conform can also run multiple formatters sequentially
                 -- python = { "isort", "black" },
