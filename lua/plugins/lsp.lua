@@ -12,6 +12,11 @@ return {
         "Bilal2453/luvit-meta", lazy = true,
     },
     {
+        'mrcjkb/haskell-tools.nvim',
+        version = '^4',
+        lazy = false,
+    },
+    {
         "neovim/nvim-lspconfig",
         dependencies = {
             { "williamboman/mason.nvim", config = true },
@@ -173,8 +178,7 @@ return {
                 zls = {},
             }
 
-            require("lspconfig").hls.setup({})
-
+            -- require("lspconfig").hls.setup({})
 
             require("lspconfig").racket_langserver.setup {
                 cmd = { "racket", "-l", "racket-langserver" },
