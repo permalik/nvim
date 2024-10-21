@@ -160,6 +160,7 @@ return {
                 -- ruff_lsp = {},
                 -- https://github.com/rust-lang/rust-analyzer
                 rust_analyzer = {},
+                slint_lsp = {},
                 -- sqlls = {},
                 -- sqls = {},
                 -- npm install -g svelte-language-server
@@ -178,7 +179,6 @@ return {
                 zls = {},
             }
 
-            require("lspconfig").slint_lsp.setup({})
             -- require("lspconfig").hls.setup({})
 
             require("lspconfig").racket_langserver.setup {
@@ -191,6 +191,7 @@ return {
 
             local ensure_installed = vim.tbl_keys(servers or {})
             vim.list_extend(ensure_installed, {
+                "slint_lsp",
                 "stylua",
             })
             require("mason-tool-installer").setup { ensure_installed = ensure_installed }
