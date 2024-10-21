@@ -178,6 +178,7 @@ return {
                 zls = {},
             }
 
+            require("lspconfig").slint_lsp.setup({})
             -- require("lspconfig").hls.setup({})
 
             require("lspconfig").racket_langserver.setup {
