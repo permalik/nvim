@@ -19,6 +19,13 @@ vim.api.nvim_create_autocmd("BufEnter", {
     command = "setlocal filetype=slint"
 })
 
+-- vim.filetype.add({
+--   extension = {
+--     qrc = "xml",
+--     ts = "xml",
+--   },
+-- })
+
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"

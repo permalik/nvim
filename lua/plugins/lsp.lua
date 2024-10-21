@@ -179,6 +179,11 @@ return {
                 zls = {},
             }
 
+            -- require("lspconfig").qmlls.setup({
+            --     cmd = {
+            --         "/Users/tymalik/Qt/6.7.3/macos/bin/qmlls"
+            --     },
+            -- })
             -- require("lspconfig").hls.setup({})
 
             require("lspconfig").racket_langserver.setup {
