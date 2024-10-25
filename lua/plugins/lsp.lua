@@ -185,6 +185,13 @@ return {
             --         "lhaskell",
             --         "cabal",
             --     },
+            --     settings = {
+            --         haskell = {
+            --             hlintOn = true,
+            --             cabalFormattingProvider = "cabalfmt",
+            --             formattingProvider = "ormolu",
+            --         }
+            --     },
             -- })
 
             require("lspconfig").racket_langserver.setup {
