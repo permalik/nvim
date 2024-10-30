@@ -111,7 +111,7 @@ return {
                 -- npm i -g vscode-langservers-extracted
                 html = {},
                 -- cargo install htmx-lsp
-                htmx = {},
+                -- htmx = {},
                 -- intelephense = {},
                 -- jdtls = {},
                 -- jinja_lsp = {},
@@ -206,8 +206,11 @@ return {
             vim.list_extend(ensure_installed, {
                 "slint_lsp",
                 "stylua",
+                "ts_ls",
             })
             require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+
+            local noop = function() end
 
             require("mason-lspconfig").setup {
                 handlers = {
@@ -228,10 +231,10 @@ return {
                             })
                         end
 
-                        if server_name == "htmx" then
-                            local lspconfig = require("lspconfig")
-                            lspconfig.htmx.setup {}
-                        end
+                        -- if server_name == "htmx" then
+                        --     local lspconfig = require("lspconfig")
+                        --     lspconfig.htmx.setup {}
+                        -- end
 
                         if server_name == "jsonls" then
                             local cssls_capabilities = vim.tbl_deep_extend("force", {}, capabilities)
@@ -245,6 +248,7 @@ return {
                         server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
                         require("lspconfig")[server_name].setup(server)
                     end,
+                    ['jdtls'] = noop,
                 },
             }
         end,
