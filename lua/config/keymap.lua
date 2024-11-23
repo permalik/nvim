@@ -46,6 +46,10 @@ vim.keymap.set("n", "<leader>c8", ":colorscheme kanagawa-lotus<cr>", {
     desc = "set [c]olorscheme 8: kanagawa-lotus",
     silent = true,
 })
+vim.keymap.set("n", "<leader>fg", ":Git<cr>", {
+    desc = "[f]ugitive [g]it interface",
+    silent = true,
+})
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {
 	desc = "cursor in middle of screen when moving down",
 	silent = true,
