@@ -83,6 +83,10 @@ return {
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+            local on_attach = function(client)
+                require'completion'.on_attach(client)
+            end
+
             local servers = {
                 -- ansiblels = {},
                 -- npm install -g @astrojs/language-server
@@ -201,6 +205,10 @@ return {
                 root_dir = require('lspconfig').util.root_pattern("racket-project.rkt", ".git"),
             }
 
+            -- require('mason-lspconfig').setup_handlers {
+            --     ['rust_analyzer'] = function() end,
+            -- }
+
             require("mason").setup()
 
             local ensure_installed = vim.tbl_keys(servers or {})
@@ -245,6 +253,29 @@ return {
                             })
                         end
 
+                        if server_name == "rust_analyzer" then
+                            require("lspconfig")[server_name].setup({
+                                on_attach = on_attach,
+                                settings = {
+                                    ["rust-analyzer"] = {
+                                        imports = {
+                                            granularity = {
+                                                group = "module",
+                                            },
+                                            prefix = "self",
+                                        },
+                                        cargo = {
+                                            buildScripts = {
+                                                enable = true,
+                                            },
+                                        },
+                                        procMacro = {
+                                            enable = true
+                                        },
+                                    }
+                                }
+                            })
+                        end
                         local server = servers[server_name] or {}
                         server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
                         require("lspconfig")[server_name].setup(server)
