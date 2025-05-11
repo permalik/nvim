@@ -31,21 +31,13 @@ return {
                     end
 
                     map("gd", require("telescope.builtin").lsp_definitions, "[g]oto [d]efinition")
-
                     map("gr", require("telescope.builtin").lsp_references, "[g]oto [r]eferences")
-
                     map("gI", require("telescope.builtin").lsp_implementations, "[g]oto [i]mplementation")
-
                     map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [d]efinition")
-
                     map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[d]ocument [s]ymbols")
-
                     map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[w]orkspace [s]ymbols")
-
                     map("<leader>rn", vim.lsp.buf.rename, "[r]e[n]ame")
-
                     map("<leader>ca", vim.lsp.buf.code_action, "[c]ode [a]ction", { "n", "x" })
-
                     map("gD", vim.lsp.buf.declaration, "[g]oto [d]eclaration")
 
                     local client = vim.lsp.get_client_by_id(event.data.client_id)
@@ -286,7 +278,7 @@ return {
         end,
     },
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         config = function()
             local null_ls = require("null-ls")
 
